@@ -10,7 +10,9 @@ const SSR: NextPage<Props> = ({ data }) => {
   return (
     <Container>
       <div>
-        <Link href="/">SSR</Link>
+        <Link href="/">
+          <h1>SSR</h1>
+        </Link>
         <ul>
           {data.map((number) => (
             <li key={number}>{number}</li>

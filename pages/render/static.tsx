@@ -10,7 +10,9 @@ const Static: NextPage<Props> = ({ data }) => {
   return (
     <Container>
       <div>
-        <Link href="/">STATIC</Link>
+        <Link href="/">
+          <h1>STATIC</h1>
+        </Link>
         <ul>
           {data.map((number) => (
             <li key={number}>{number}</li>

@@ -17,10 +17,14 @@ const Home: NextPage = () => (
       <h1>Home</h1>
       <ButtonContainer>
         <Link href="/render/static">
-          <Button>Static</Button>
+          <a>
+            <Button>Static</Button>
+          </a>
         </Link>
         <Link href="/render/ssr">
-          <Button>SSR</Button>
+          <a>
+            <Button>SSR</Button>
+          </a>
         </Link>
       </ButtonContainer>
     </Main>
