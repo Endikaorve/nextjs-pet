@@ -1,63 +1,7 @@
 import type { NextPage } from "next";
 
-import Head from "next/head";
-import Link from "next/link";
+import Home from "src/ui/pages/Home/Home";
 
-import styled from "styled-components";
+const HomePage: NextPage = () => <Home />;
 
-const Home: NextPage = () => (
-  <div>
-    <Head>
-      <title>Pet project</title>
-      <meta name="description" content="My pet project" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-
-    <Main>
-      <h1>Home</h1>
-      <ButtonContainer>
-        <Link href="/render/static">
-          <a>
-            <Button>Static</Button>
-          </a>
-        </Link>
-        <Link href="/render/ssr">
-          <a>
-            <Button>SSR</Button>
-          </a>
-        </Link>
-      </ButtonContainer>
-    </Main>
-  </div>
-);
-
-export default Home;
-
-const Main = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  height: 100vh;
-  width: 100vw;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`;
-
-const Button = styled.button`
-  border: none;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
-  font-size: 1.5rem;
-  background-color: #ffffff;
-
-  &:hover {
-    background-color: #cccccc;
-    cursor: pointer;
-  }
-`;
+export default HomePage;
