@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
-import PokeCard from "src/ui/pages/Home/_components/PokeCard/PokeCard";
+import Header from "./_components/Header/Header";
+import PokeCard from "./_components/PokeCard/PokeCard";
 
 import styled from "styled-components";
 
@@ -39,11 +40,14 @@ const Home: React.FC = () => {
   };
 
   return (
-    <PokeContainer>
-      {pokemons.map((p) => (
-        <PokeCard key={p.id} pokemon={p} />
-      ))}
-    </PokeContainer>
+    <>
+      <Header />
+      <PokeContainer>
+        {pokemons.map((p) => (
+          <PokeCard key={p.id} pokemon={p} />
+        ))}
+      </PokeContainer>
+    </>
   );
 };
 
@@ -53,6 +57,7 @@ const PokeContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  padding: 16px;
 `;
 
 export default Home;

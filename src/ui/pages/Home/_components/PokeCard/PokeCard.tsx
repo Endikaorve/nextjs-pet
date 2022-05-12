@@ -1,8 +1,3 @@
-// import weight from './../../../assets/img/icons/weight.svg'
-// import height from './../../../assets/img/icons/height.svg'
-
-// import weight from "public/assets/images/_icons/weight.svg";
-
 import Image from "next/image";
 import styled from "styled-components";
 import { Color, ColorType } from "styles/theme/Colors";
