@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   const getPokemons = async () => {
     const response = await fetch(
-      "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0"
+      "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"
     );
     const simplifiedPokemons: any = await response.json();
 
