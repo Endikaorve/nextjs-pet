@@ -1,17 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 import styled from "styled-components";
 
 const Header: React.FC = () => (
   <Container>
     <ImageWrapper>
-      <Image
-        src={"/assets/images/logo.png"}
-        alt={"main-logo"}
-        quality={100}
-        layout={"fill"}
-        objectFit={"contain"}
-        priority
-      />
+      <Link href={"/"}>
+        <a>
+          <Image
+            src={"/assets/images/logo.png"}
+            alt={"main-logo"}
+            quality={100}
+            layout={"fill"}
+            objectFit={"contain"}
+            priority
+          />
+        </a>
+      </Link>
     </ImageWrapper>
   </Container>
 );

@@ -12,8 +12,8 @@ const PokemonService = {
     return pokemonsList;
   },
 
-  getById: async (id: string) => {
-    const pokemonDTO = await PokemonRepository.getById(id);
+  getByName: async (name: string) => {
+    const pokemonDTO = await PokemonRepository.getByName(name);
     const pokemon = PokemonMapper.map(pokemonDTO);
 
     return pokemon;

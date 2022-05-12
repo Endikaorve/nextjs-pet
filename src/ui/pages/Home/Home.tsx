@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import styled from "styled-components";
 
-import Header from "./_components/Header/Header";
+import Header from "src/ui/components/Header/Header";
 import PokeCard from "./_components/PokeCard/PokeCard";
 import PokeCardSkeleton from "./_components/PokeCardSkeleton/PokeCardSkeleton";
 

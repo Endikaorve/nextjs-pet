@@ -15,7 +15,7 @@ const PokemonRepository = {
     );
   },
 
-  getById: async (id: string) => {
+  getByName: async (id: string) => {
     return ApiService.get(`${url}/pokemon/${id}`);
   },
 };

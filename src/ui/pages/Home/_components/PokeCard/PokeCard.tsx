@@ -11,7 +11,7 @@ interface Props {
 }
 
 const PokeCard: React.FC<Props> = ({ pokemon }) => (
-  <Link href={`/details/${pokemon.id}`}>
+  <Link href={`/details/${pokemon.name}`}>
     <a>
       <Card type={pokemon.types[0]}>
         <CardHeader>
