@@ -10,6 +10,7 @@ const Header: React.FC = () => (
         quality={100}
         layout={"fill"}
         objectFit={"contain"}
+        priority
       />
     </ImageWrapper>
   </Container>

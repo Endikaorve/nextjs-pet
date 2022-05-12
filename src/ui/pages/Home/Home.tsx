@@ -2,11 +2,12 @@ import { useEffect, useState } from "react";
 
 import Header from "./_components/Header/Header";
 import PokeCard from "./_components/PokeCard/PokeCard";
+import PokeCardSkeleton from "./_components/PokeCardSkeleton/PokeCardSkeleton";
 
 import styled from "styled-components";
 
 const Home: React.FC = () => {
-  const [pokemons, setPokemons] = useState<any[]>([]);
+  const [pokemons, setPokemons] = useState<any[] | undefined>(undefined);
 
   useEffect(() => {
     getPokemons();
@@ -39,13 +40,15 @@ const Home: React.FC = () => {
     setPokemons(detailedPokemons);
   };
 
+  console.log("pokemons", pokemons);
+
   return (
     <>
       <Header />
       <PokeContainer>
-        {pokemons.map((p) => (
-          <PokeCard key={p.id} pokemon={p} />
-        ))}
+        {!pokemons &&
+          Array.from(Array(12).keys()).map((i) => <PokeCardSkeleton key={i} />)}
+        {pokemons && pokemons.map((p) => <PokeCard key={p.id} pokemon={p} />)}
       </PokeContainer>
     </>
   );
