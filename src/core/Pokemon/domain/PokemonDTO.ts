@@ -1,3 +1,5 @@
+import { ColorType } from "styles/theme/Colors";
+
 export interface PokemonDTO {
   id: string;
   name: string;
@@ -6,7 +8,7 @@ export interface PokemonDTO {
   types: {
     slot: number;
     type: {
-      name: string;
+      name: ColorType;
       url: string;
     };
   }[];
