@@ -7,6 +7,6 @@ export interface Pokemon {
   weight: number;
   types: ColorType[];
   img: string;
-  alt_img: string;
+  altImg: string;
   description: string;
 }
