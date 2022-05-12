@@ -1,9 +1,11 @@
 import ApiService from "src/core/_shared/Api/ApiService";
 
+const url = "https://pokeapi.co/api/v2";
+
 const PokemonRepository = {
   getAll: async () => {
     const simplifiedPokemons = await ApiService.get(
-      "https://pokeapi.co/api/v2/pokemon?limit=20&offset=0"
+      `${url}/pokemon?limit=20&offset=0`
     );
 
     return await Promise.all(
@@ -11,6 +13,10 @@ const PokemonRepository = {
         return ApiService.get(p.url);
       })
     );
+  },
+
+  getById: async (id: string) => {
+    return ApiService.get(`${url}/pokemon/${id}`);
   },
 };
 

@@ -1,63 +1,71 @@
 import Image from "next/image";
+import Link from "next/link";
+
 import styled from "styled-components";
 import { Color, ColorType } from "styles/theme/Colors";
 
+import { Pokemon } from "src/core/Pokemon/domain/Pokemon";
+
 interface Props {
-  pokemon: any;
+  pokemon: Pokemon;
 }
 
 const PokeCard: React.FC<Props> = ({ pokemon }) => (
-  <Card type={pokemon.types[0]}>
-    <CardHeader>
-      <CardHeaderName>{pokemon.name}</CardHeaderName>
-      <CardHeaderCode>#{pokemon.id}</CardHeaderCode>
-    </CardHeader>
-    <CardBody>
-      <CardBodyImgWrapper>
-        <Image
-          src={pokemon.img}
-          alt={pokemon.id}
-          layout={"fill"}
-          objectFit={"contain"}
-          quality={100}
-        />
-      </CardBodyImgWrapper>
+  <Link href={`/details/${pokemon.id}`}>
+    <a>
+      <Card type={pokemon.types[0]}>
+        <CardHeader>
+          <CardHeaderName>{pokemon.name}</CardHeaderName>
+          <CardHeaderCode>#{pokemon.id}</CardHeaderCode>
+        </CardHeader>
+        <CardBody>
+          <CardBodyImgWrapper>
+            <Image
+              src={pokemon.img}
+              alt={pokemon.id}
+              layout={"fill"}
+              objectFit={"contain"}
+              quality={100}
+            />
+          </CardBodyImgWrapper>
 
-      <CardBodyTypes>
-        {pokemon.types.map((type: any) => (
-          <CardBodyTypesBadge
-            key={`type_badge_${pokemon.id}_${type}`}
-            type={type}
-          >
-            {type}
-          </CardBodyTypesBadge>
-        ))}
-      </CardBodyTypes>
-      <CardBodyAbout>About</CardBodyAbout>
-      <CardBodyDetails>
-        <CardBodyDetailsContent>
-          <CardBodyDetailsContentData>
-            {/* <CardBodyDetailsContentDataImg src={weight} alt="weight-icon" /> */}
-            {pokemon.weight} kg
-          </CardBodyDetailsContentData>
-          <CardBodyDetailsContentTitle>Weight</CardBodyDetailsContentTitle>
-        </CardBodyDetailsContent>
+          <CardBodyTypes>
+            {pokemon.types.map((type: any) => (
+              <CardBodyTypesBadge
+                key={`type_badge_${pokemon.id}_${type}`}
+                type={type}
+              >
+                {type}
+              </CardBodyTypesBadge>
+            ))}
+          </CardBodyTypes>
+          <CardBodyAbout>About</CardBodyAbout>
+          <CardBodyDetails>
+            <CardBodyDetailsContent>
+              <CardBodyDetailsContentData>
+                {/* <CardBodyDetailsContentDataImg src={weight} alt="weight-icon" /> */}
+                {pokemon.weight} kg
+              </CardBodyDetailsContentData>
+              <CardBodyDetailsContentTitle>Weight</CardBodyDetailsContentTitle>
+            </CardBodyDetailsContent>
 
-        <CardBodyDetailsContent>
-          <CardBodyDetailsContentData>
-            {/* <img
+            <CardBodyDetailsContent>
+              <CardBodyDetailsContentData>
+                {/* <img
               className="poke-card-body-details-content-data-img"
               src={height}
               alt="height-icon"
             /> */}
-            {pokemon.height} m
-          </CardBodyDetailsContentData>
-          <CardBodyDetailsContentTitle>Height</CardBodyDetailsContentTitle>
-        </CardBodyDetailsContent>
-      </CardBodyDetails>
-      <CardBodyDescription>{pokemon.description}</CardBodyDescription>
-    </CardBody>
-  </Card>
+                {pokemon.height} m
+              </CardBodyDetailsContentData>
+              <CardBodyDetailsContentTitle>Height</CardBodyDetailsContentTitle>
+            </CardBodyDetailsContent>
+          </CardBodyDetails>
+          <CardBodyDescription>{pokemon.description}</CardBodyDescription>
+        </CardBody>
+      </Card>
+    </a>
+  </Link>
 );
 
 const Card = styled.div<{
