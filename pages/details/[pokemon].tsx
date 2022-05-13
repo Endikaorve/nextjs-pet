@@ -4,8 +4,6 @@ import { useRouter } from "next/router";
 
 import PokemonDetails from "src/ui/pages/PokemonDetails/PokemonDetails";
 
-// import Home from "src/ui/pages/Home/Home";
-
 const PokemonDetailsPage: NextPage = () => {
   const router = useRouter();
   const { pokemon } = router.query;

@@ -25,7 +25,6 @@ const PokeCard: React.FC<Props> = ({ pokemon }) => (
               alt={pokemon.id}
               layout={"fill"}
               objectFit={"contain"}
-              quality={100}
             />
           </CardBodyImgWrapper>
 

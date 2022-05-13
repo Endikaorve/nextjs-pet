@@ -2,7 +2,7 @@ import ApiService from "src/core/_shared/Api/ApiService";
 
 const url = "https://pokeapi.co/api/v2";
 
-const PokemonRepository = {
+const PokemonApiRepository = {
   getAll: async () => {
     const simplifiedPokemons = await ApiService.get(
       `${url}/pokemon?limit=20&offset=0`
@@ -20,4 +20,4 @@ const PokemonRepository = {
   },
 };
 
-export default PokemonRepository;
+export default PokemonApiRepository;

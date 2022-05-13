@@ -47,7 +47,7 @@ const PokemonDetails: React.FC<Props> = ({ pokemonName }) => {
               alt={pokemon.id}
               layout={"fill"}
               objectFit={"contain"}
-              quality={100}
+              priority
             />
           </ImageWrapper>
         </ImageContainer>
