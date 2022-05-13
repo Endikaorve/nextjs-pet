@@ -11,10 +11,10 @@ import { Pokemon } from "src/core/Pokemon/domain/Pokemon";
 import PokemonService from "src/core/Pokemon/services/PokemonService";
 
 interface Props {
-  pokemonId: string;
+  pokemonName: string;
 }
 
-const PokemonDetails: React.FC<Props> = ({ pokemonId }) => {
+const PokemonDetails: React.FC<Props> = ({ pokemonName }) => {
   const [pokemon, setPokemon] = useState<Pokemon | undefined>(undefined);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ const PokemonDetails: React.FC<Props> = ({ pokemonId }) => {
   }, []);
 
   const getPokemon = async () => {
-    const pokemonByName = await PokemonService.getByName(pokemonId);
+    const pokemonByName = await PokemonService.getByName(pokemonName);
     setPokemon(pokemonByName);
   };
 
