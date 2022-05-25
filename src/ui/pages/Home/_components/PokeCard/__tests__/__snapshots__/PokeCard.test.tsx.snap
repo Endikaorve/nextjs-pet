@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PokeCard Snapshot Snapshots 1`] = `
+<a
+  href="/details/Bulbasaur"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <div
+    className="sc-1ce23569-0 eyUTxi"
+    type="grass"
+  >
+    <div
+      className="sc-1ce23569-1 fQXFVc"
+    >
+      <div
+        className="sc-1ce23569-2 fKGLHe"
+      >
+        Bulbasaur
+      </div>
+      <div
+        className="sc-1ce23569-3 cpNnca"
+      >
+        #
+        1
+      </div>
+    </div>
+    <div
+      className="sc-1ce23569-4 haWEmS"
+    >
+      <div
+        className="sc-1ce23569-5 iAcChI"
+      >
+        <span
+          style={
+            Object {
+              "background": "none",
+              "border": 0,
+              "bottom": 0,
+              "boxSizing": "border-box",
+              "display": "block",
+              "height": "initial",
+              "left": 0,
+              "margin": 0,
+              "opacity": 1,
+              "overflow": "hidden",
+              "padding": 0,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "width": "initial",
+            }
+          }
+        >
+          <img
+            alt="1"
+            data-nimg="fill"
+            decoding="async"
+            onError={[Function]}
+            onLoad={[Function]}
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style={
+              Object {
+                "border": "none",
+                "bottom": 0,
+                "boxSizing": "border-box",
+                "display": "block",
+                "height": 0,
+                "left": 0,
+                "margin": "auto",
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "contain",
+                "objectPosition": undefined,
+                "padding": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "width": 0,
+              }
+            }
+          />
+          <noscript>
+            <img
+              alt="1"
+              data-nimg="fill"
+              decoding="async"
+              loading="lazy"
+              sizes="100vw"
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              srcSet="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 640w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 750w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 828w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 1080w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 1200w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 1920w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 2048w, https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg 3840w"
+              style={
+                Object {
+                  "border": "none",
+                  "bottom": 0,
+                  "boxSizing": "border-box",
+                  "display": "block",
+                  "height": 0,
+                  "left": 0,
+                  "margin": "auto",
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "contain",
+                  "objectPosition": undefined,
+                  "padding": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                  "width": 0,
+                }
+              }
+            />
+          </noscript>
+        </span>
+      </div>
+      <div
+        className="sc-1ce23569-6 cYKHPW"
+      >
+        <span
+          className="sc-1ce23569-7 bJPhlh"
+          type="grass"
+        >
+          grass
+        </span>
+        <span
+          className="sc-1ce23569-7 kLnbQk"
+          type="poison"
+        >
+          poison
+        </span>
+      </div>
+      <div
+        className="sc-1ce23569-8 eZSuxQ"
+      >
+        About
+      </div>
+      <div
+        className="sc-1ce23569-9 cLwqfx"
+      >
+        <div
+          className="sc-1ce23569-10 cvLBdK"
+        >
+          <div
+            className="sc-1ce23569-11 fcMZuV"
+          >
+            0.7
+             kg
+          </div>
+          <div
+            className="sc-1ce23569-13 efIxYo"
+          >
+            Weight
+          </div>
+        </div>
+        <div
+          className="sc-1ce23569-10 cvLBdK"
+        >
+          <div
+            className="sc-1ce23569-11 fcMZuV"
+          >
+            6.9
+             m
+          </div>
+          <div
+            className="sc-1ce23569-13 efIxYo"
+          >
+            Height
+          </div>
+        </div>
+      </div>
+      <div
+        className="sc-1ce23569-14 dNFOkl"
+      >
+        Lorem ipsum dolor sit emet
+      </div>
+    </div>
+  </div>
+</a>
+`;

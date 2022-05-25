@@ -1,5 +1,7 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import renderer from "react-test-renderer";
+
 import { Pokemon } from "src/core/Pokemon/domain/Pokemon";
 import PokeCard from "../PokeCard";
 
@@ -15,13 +17,13 @@ const fakePokemon: Pokemon = {
   description: "Lorem ipsum dolor sit emet",
 };
 
-beforeEach(() => {
-  render(<PokeCard pokemon={fakePokemon} />);
-});
-
 // DUDAS: ¿1 solo test que compruebe todo o un test por cada campo a comprobar?
 
 describe("PokeCard", () => {
+  beforeEach(() => {
+    render(<PokeCard pokemon={fakePokemon} />);
+  });
+
   it("renders the complete card", () => {
     const pokemonName = screen.getByText(fakePokemon.name);
     const pokemonID = screen.getByText(`#${fakePokemon.id}`);
@@ -58,5 +60,14 @@ describe("PokeCard", () => {
     });
 
     expect(pokemonImage).toBeInTheDocument();
+  });
+});
+
+describe("PokeCard Snapshot", () => {
+  it("Snapshots", () => {
+    const pokeCard = renderer
+      .create(<PokeCard pokemon={fakePokemon} />)
+      .toJSON();
+    expect(pokeCard).toMatchSnapshot();
   });
 });

@@ -11,6 +11,7 @@ import PokemonService from "src/core/Pokemon/services/PokemonService";
 
 const Home: React.FC = () => {
   const [pokemons, setPokemons] = useState<Pokemon[] | undefined>(undefined);
+  const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
     getPokemons();
@@ -20,16 +21,24 @@ const Home: React.FC = () => {
     try {
       const pokemonsList = await PokemonService.getAll();
       setPokemons(pokemonsList);
-    } catch (e) {}
+    } catch (e) {
+      setError(true);
+    }
   };
+
+  if (error) {
+    return <div>Ha habido un error.</div>;
+  }
+
+  const skeletonArray = Array.from(Array(12).keys());
 
   return (
     <>
       <Header />
       <PokeContainer>
-        {!pokemons &&
-          Array.from(Array(12).keys()).map((i) => <PokeCardSkeleton key={i} />)}
-        {pokemons && pokemons.map((p) => <PokeCard key={p.id} pokemon={p} />)}
+        {pokemons
+          ? pokemons.map((p) => <PokeCard key={p.id} pokemon={p} />)
+          : skeletonArray.map((i) => <PokeCardSkeleton key={i} />)}
       </PokeContainer>
     </>
   );

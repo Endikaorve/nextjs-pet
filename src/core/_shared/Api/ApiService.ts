@@ -1,5 +1,7 @@
+import unfetch from "isomorphic-unfetch";
+
 const get = async (url: string) => {
-  const response = await fetch(url);
+  const response = await unfetch(url);
   return response.json();
 };
 
