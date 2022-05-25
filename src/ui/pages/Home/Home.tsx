@@ -17,8 +17,10 @@ const Home: React.FC = () => {
   }, []);
 
   const getPokemons = async () => {
-    const pokemonsList = await PokemonService.getAll();
-    setPokemons(pokemonsList);
+    try {
+      const pokemonsList = await PokemonService.getAll();
+      setPokemons(pokemonsList);
+    } catch (e) {}
   };
 
   return (

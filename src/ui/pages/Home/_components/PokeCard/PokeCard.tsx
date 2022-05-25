@@ -21,7 +21,7 @@ const PokeCard: React.FC<Props> = ({ pokemon }) => (
         <CardBody>
           <CardBodyImgWrapper>
             <Image
-              src={pokemon.img}
+              src={pokemon.altImg}
               alt={pokemon.id}
               layout={"fill"}
               objectFit={"contain"}
