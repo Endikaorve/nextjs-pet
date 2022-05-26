@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render, screen, waitFor } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import Home from "../Home";
@@ -101,5 +101,15 @@ describe("Home", () => {
     expect(screen.queryByText("Bulbasaur")).toBeNull();
 
     expect(await screen.findByText("Ha habido un error.")).toBeInTheDocument();
+  });
+});
+
+describe("Home navigation", () => {
+  it("should navigate from home to pokemon details and back to home", async () => {
+    render(<Home />);
+
+    expect(screen.queryByText("Bulbasaur")).toBeNull();
+
+    expect(await screen.findByText("Bulbasaur")).toBeInTheDocument();
   });
 });
