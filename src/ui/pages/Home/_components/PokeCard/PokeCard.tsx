@@ -8,9 +8,10 @@ import { Pokemon } from "src/core/Pokemon/domain/Pokemon";
 
 interface Props {
   pokemon: Pokemon;
+  fancyImages: boolean;
 }
 
-const PokeCard: React.FC<Props> = ({ pokemon }) => (
+const PokeCard: React.FC<Props> = ({ pokemon, fancyImages }) => (
   <Link href={`/details/${pokemon.name}`}>
     <a>
       <Card type={pokemon.types[0]}>
@@ -21,7 +22,7 @@ const PokeCard: React.FC<Props> = ({ pokemon }) => (
         <CardBody>
           <CardBodyImgWrapper>
             <Image
-              src={pokemon.altImg}
+              src={fancyImages ? pokemon.altImg : pokemon.img}
               alt={pokemon.id}
               layout={"fill"}
               objectFit={"contain"}

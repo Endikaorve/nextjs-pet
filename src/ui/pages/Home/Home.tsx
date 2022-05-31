@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import styled from "styled-components";
 
@@ -9,9 +9,14 @@ import PokeCardSkeleton from "./_components/PokeCardSkeleton/PokeCardSkeleton";
 import { Pokemon } from "src/core/Pokemon/domain/Pokemon";
 import PokemonService from "src/core/Pokemon/services/PokemonService";
 
+import { FancyImagesContext } from "src/ui/_contexts/FancyImagesContext";
+
 const Home: React.FC = () => {
   const [pokemons, setPokemons] = useState<Pokemon[] | undefined>(undefined);
   const [error, setError] = useState<boolean>(false);
+
+  const fancyImagesContext = useContext(FancyImagesContext);
+  const fancyImages = fancyImagesContext.state.fancyImages;
 
   useEffect(() => {
     getPokemons();
@@ -37,7 +42,9 @@ const Home: React.FC = () => {
       <Header />
       <PokeContainer>
         {pokemons
-          ? pokemons.map((p) => <PokeCard key={p.id} pokemon={p} />)
+          ? pokemons.map((p) => (
+              <PokeCard key={p.id} pokemon={p} fancyImages={fancyImages} />
+            ))
           : skeletonArray.map((i) => <PokeCardSkeleton key={i} />)}
       </PokeContainer>
     </>
